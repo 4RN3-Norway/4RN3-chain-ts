@@ -122,7 +122,7 @@ This enables a declarative, AI-routed dev pipeline that mirrors conventional bui
 
 ---
 
-✨ Features
+## ✨ Features
 - 🧩 AI-driven modular architecture with model-task mapping
 - 🧠 Model-specialized logic: use the right AI for the right job (reasoning, codegen, boilerplate, etc.)
 - 🔀 Prompt router layer using LLaMA or similar model to select the best AI for the job
@@ -135,7 +135,7 @@ This enables a declarative, AI-routed dev pipeline that mirrors conventional bui
 
 ---
 
-🛠️ Installation
+## 🛠️ Installation
 
 To use or extend the stack, you’ll need:
 - Bun (preferred): https://bun.sh
@@ -145,7 +145,7 @@ To use or extend the stack, you’ll need:
 
 ---
 
-🧪 Usage
+## 🧪 Usage
 
 This repo doesn’t define a single CLI or binary — instead, it outlines how to structure your stack or toolchain using:
 - Claude for structured OOP code
@@ -156,19 +156,19 @@ How you use the stack is up to you: it could power a CLI, be integrated into dev
 
 ---
 
-🧱 Philosophy
+## 🧱 Philosophy
 - Don’t generalize everything. Use models for what they’re best at.
 - Stateless by default. You don’t need memory if you can prompt smartly.
 - Modularity over framework. Compose small model tasks instead of monoliths.
 
 ---
 
-📄 License
+## 📄 License
 
 This project is licensed under the MIT License.
 
 ---
 
-🚧 Status
+## 🚧 Status
 
-Actively in development. This is the stack definition repo — actual plugins, apps, and helpers may live in separate repositories under the same namespace.te repositories under the same namespace.
+Actively in development. This is the stack definition repo — actual plugins, apps, and helpers may live in separate repositories under the same namespace.
