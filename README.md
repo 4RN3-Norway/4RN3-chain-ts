@@ -23,7 +23,7 @@ This repo defines the **stack itself** — including conventions, model roles, a
 | Test generation             | GPT-4o |
 | Bug fixing                  | Claude 3.7 Sonnet |
 | UI (if applicable)          | Nuxt 3, Tauri (desktop) |
-| DB (if applicable)          | MongoDB |
+| DB (if applicable)          | MongoDB (alt. FerretDB) |
 | Runtime                     | TypeScript (pref. [Bun](https://bun.sh)) |
 
 Each model in the stack is chosen for a specific role. This lets you build fast, well-structured applications using task decomposition, automated bugfixing, and domain-specific reasoning — all with minimal overhead.
@@ -48,7 +48,7 @@ Generate a maths library that saves previous actions to a database.
 
 [PLAN]
 Analyze the prompt and propose a multi-stage approach to fulfill it.
-Response: I will create a TypeScript math utility module that logs operations to a MongoDB database using Bun. The stages will include type-safe operations, async logging, a query layer...
+Response: I will create a TypeScript math utility module that logs operations to a MongoDB/FerretDB database using Bun. The stages will include type-safe operations, async logging, a query layer...
 
 [PROTOTYPE]
 Generate a rough prototype or high-level sketch of the system.
@@ -56,7 +56,7 @@ Response: We'll define a class-based interface, with methods like `add`, `subtra
 
 [CODEGEN]
 Refine the prototype into structured, working TypeScript code.
-Response: Code generation completed. The module includes `MathService`, `Logger`, and MongoDB integration...
+Response: Code generation completed. The module includes `MathService`, `Logger`, and MongoDB/FerretDB integration...
 
 [TESTGEN]
 Test the code with multiple checks for exported functions.
@@ -85,7 +85,7 @@ This enables a declarative, AI-routed dev pipeline that mirrors conventional bui
 - ⚙️ Shell-capable agent layer for testing, bugfixing, and orchestration
 - 💻 Optional UI layer with Nuxt 3
 - 🖥️ Optional Desktop UI support with Tauri 2
-- 🗃️ Optional database support with MongoDB
+- 🗃️ Optional database support with MongoDB or FerretDB
 - 🔋 TypeScript-native with focus on OOP and modularity
 - 🪶 Lightweight by default, expandable via plugins, services, and tools
 
