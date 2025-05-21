@@ -23,51 +23,7 @@ This repo defines the **stack itself** — including conventions, model roles, a
 | Test generation             | GPT-4o |
 | Bug fixing                  | Claude 3.7 Sonnet |
 | UI (if applicable)          | Nuxt 3, Tauri (desktop) |
-| DB (if applicable)          | Postgres |
-| Runtime                     | TypeScript (pref. [Bun](https://bun.sh)) |
-
-Each model in the stack is chosen for a specific role. This lets you build fast, well-structured applications using task decomposition, automated bugfixing, and domain-specific reasoning — all with minimal overhead.
-
----
-
-## 🔄 Prompt Routing & Execution Chain
-
-A lightweight instruction-following model (such as [LLaMA 4 Maverick Instruct](https://fireworks.ai/models/fireworks/llama4-maverick-instruct-basic)) is used to **analyze input prompts**, route tasks to appropriate models, and generate responses in a structured multi-stage chain.
-
-Each stage receives the **original prompt** and **all prior stage outputs**, enabling iterative, context-aware development.
-
----
-
-### 🧪 Example: Model-Orchestrated Prompt Flow
-
-**Prompt:**
-> Generate a maths library that saves previous actions to a database.
-# 4RN3-chain-ts
-
-![Generated with AI assistance: Tailored for 4RN3-chain-ts](https://img.shields.io/badge/Generated_with_AI_assistance-Tailored_for_4RN3--chain--ts-red)
-![language: TypeScript](https://img.shields.io/badge/language-TypeScript-blue)
-![license: MIT](https://img.shields.io/badge/license-MIT-green)
-
-**4RN3-chain-ts** is a modular, AI-powered full-stack development stack built on TypeScript. It leverages multiple state-of-the-art AI models, a flexible architecture, and lightweight developer ergonomics to provide a smart, OOP-friendly foundation for modern application and library development.
-
-This repo defines the **stack itself** — including conventions, model roles, and technology pairings — not any specific app or plugin built on top of it.
-
----
-
-## 🧠 Overview
-
-**4RN3-chain-ts** combines the strengths of different AI models and modern dev tools to form a reasoning-first, shell-friendly TypeScript ecosystem:
-
-| Purpose                     | Tooling |
-|-----------------------------|---------|
-| Prompt Routing / Orchestration | Lightweight Model (pref. [Llama 4 Maverick Instruct](https://fireworks.ai/models/fireworks/llama4-maverick-instruct-basic)) |
-| Codegen (OOP/TS)            | Claude 3.7 Sonnet |
-| Fast boilerplate            | GPT-4o |
-| Reasoning/docs/plans        | o3 (or o4-mini) |
-| Test generation             | GPT-4o |
-| Bug fixing                  | Claude 3.7 Sonnet |
-| UI (if applicable)          | Nuxt 3, Tauri (desktop) |
-| DB (if applicable)          | Postgres |
+| DB (if applicable)          | MongoDB |
 | Runtime                     | TypeScript (pref. [Bun](https://bun.sh)) |
 
 Each model in the stack is chosen for a specific role. This lets you build fast, well-structured applications using task decomposition, automated bugfixing, and domain-specific reasoning — all with minimal overhead.
@@ -92,7 +48,7 @@ Generate a maths library that saves previous actions to a database.
 
 [PLAN]
 Analyze the prompt and propose a multi-stage approach to fulfill it.
-Response: I will create a TypeScript math utility module that logs operations to a PostgreSQL database using Bun. The stages will include type-safe operations, async logging, a query layer...
+Response: I will create a TypeScript math utility module that logs operations to a MongoDB database using Bun. The stages will include type-safe operations, async logging, a query layer...
 
 [PROTOTYPE]
 Generate a rough prototype or high-level sketch of the system.
@@ -100,7 +56,7 @@ Response: We'll define a class-based interface, with methods like `add`, `subtra
 
 [CODEGEN]
 Refine the prototype into structured, working TypeScript code.
-Response: Code generation completed. The module includes `MathService`, `Logger`, and PostgreSQL integration...
+Response: Code generation completed. The module includes `MathService`, `Logger`, and MongoDB integration...
 
 [TESTGEN]
 Test the code with multiple checks for exported functions.
@@ -129,7 +85,7 @@ This enables a declarative, AI-routed dev pipeline that mirrors conventional bui
 - ⚙️ Shell-capable agent layer for testing, bugfixing, and orchestration
 - 💻 Optional UI layer with Nuxt 3
 - 🖥️ Optional Desktop UI support with Tauri 2
-- 🗃️ Optional database support with PostgreSQL
+- 🗃️ Optional database support with MongoDB
 - 🔋 TypeScript-native with focus on OOP and modularity
 - 🪶 Lightweight by default, expandable via plugins, services, and tools
 
